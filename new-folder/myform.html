@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Loan Predictor App</title>
+</head>
+<style>
+div {
+  /*border-radius: 5px;*/
+  background-color: #f2f2f2;
+  padding: 190px;
+  background-image: url(https://cdn.hswstatic.com/gif/loan-personal.jpg);
+ /* filter: blur(2px);
+  -webkit-filter: blur(4px);*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+input[type=text], select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: #e1e6ec;
+  display: inline-block;
+  border: 1px solid rgb(150, 147, 231);
+  border-radius: 10px;
+  box-sizing: border-box;
+
+}
+
+.heart1{
+    color: rgb(255, 16, 16);
+    
+    
+}
+
+input[type=submit] {
+  width: 15%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+
+}
+
+</style>
+<body>
+<center>
+<div>
+        <h1 class="heart1" style="color:black"><center>Loan Predictor App</center></h1>
+<form action='/output'  method="GET">
+<input type="text" name='z1' placeholder="Gender - Male--> 1  Female --> 0"/>
+<br />
+<input type="text" name='z2' placeholder="Married - yes --> 1 No --> 0"/>
+<br />
+<input type="text" name='z3' placeholder="Dependants"/>
+<br />
+<input type="text" name='z4' placeholder="Education - graduate --> 1 Not graduate --> 0"/>
+<br />
+<input type="text" name='z5' placeholder="Seld Employes - yes --> 1 No --> 0"/>
+<br />
+<input type="text" name='z6' placeholder="Applicant Income"/>
+<br />
+<input type="text" name='z7' placeholder="CO Applicant Income"/>
+<br />
+<input type="text" name='z8' placeholder="Loan Amount"/>
+<br />
+<input type="text" name='z9' placeholder="Loan Amount Term"/>
+<br />
+<input type="text" name='z10' placeholder="Credit History"/>
+<br />
+<input type="text" name='z11' placeholder="Property Area"/>
+<br />
+<input value="Predict" type='submit' />
+<br />
+</form>
+</div>
+</center>
+</body>
+</html>
