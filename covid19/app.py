@@ -63,8 +63,8 @@ def dia():
       output = model.predict([[ int(x1), int(x2),  int(x3), int(x4),  int(x5), int(x6),  int(x7), int(x8),  int(x9), int(x10)]])
       if str(round(output[0])) == 1:
          data="Covid Positive !!"
-         return render_template("result.html", data=data)
+         return render_template("covid-positive-results.html", data=data)
       else:
           data="Covid Negative !!"
-          return render_template("result.html", data=data)
+          return render_template("covid-negative-results.html", data=data)
 app.run(host="0.0.0.0", port=6666)
