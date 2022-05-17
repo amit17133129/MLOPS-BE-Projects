@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<SCRIPT language=Javascript>
+   
+    function isNumberKey(evt)
+    {
+       var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57))
+          return false;
+
+       return true;
+    }
+   
+ </SCRIPT>
+        <title>Wine Quality Prediction App</title>
+</head>
+<style>
+div {
+  /*border-radius: 5px;*/
+  background-color: #f2f2f2;
+  padding: 50px;
+  background-image: url(https://wallpapercave.com/dwp2x/wp2878157.jpg);
+ /* filter: blur(2px);
+  -webkit-filter: blur(4px);*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}   
+input[type=text], select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: #e1e6ec;
+  display: inline-block;
+  border: 1px solid rgb(150, 147, 231);
+  border-radius: 10px;
+  box-sizing: border-box;
+
+}
+
+.heart1{
+    color: rgb(255, 16, 16);
+
+
+}
+
+input[type=submit] {
+  width: 15%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.ph{
+  width: 550px;
+  height: 28px;
+  /* -moz-border-radius: 15px; */
+ border-radius: 10px;
+    border:solid 1px rgb(255, 255, 255);
+    padding:5px;
+    background-color: #dedfe1;
+    padding-top: 8px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+
+}
+
+</style>
+<body>
+<center>
+<div>
+        <h1 class="heart1" style="color:rgb(255, 255, 255)"><center>Wine Quality Prediction App</center></h1>
+<form action='/output'  method="post">
+<input type="text"  name='z0' onkeypress="return isNumberKey(event)" placeholder="Fixed Acidity" required/>
+<br />
+
+<input type="text"  name='z1' placeholder="Volatile Acidity" required/>
+<br />
+
+<input type="text"  name='z2' placeholder="Citric Acid" required/>
+<br />
+
+<input type="text"  name='z3' placeholder="Residual Sugar" required/>
+<br />
+
+<input type="text"  name='z4' placeholder="Chlorides" required/>
+<br />
+
+<input type="text"  name='z5' placeholder="Free sulfur dioxide" required/>
+<br />
+
+<input type="text"  name='z6' placeholder="Total sulfur dioxide" required/>
+<br />
+
+<input type="text"  name='z7' placeholder="Density" required/>
+<br />
+
+<!-- <label for="PH Value">PH Value(between 0 - 14):</label> -->
+<input type="number" class="ph" min="0" max="14" name='z8' placeholder="PH Value(between 0 - 14):" required/>
+<br />
+
+<input type="text"  name='z9' placeholder="Sulphates" required/>
+<br />
+
+
+<input type="text"  name='z10' placeholder="Alcohol" required/>
+
+<br />
+<input value="Submit" type='submit' />
+<br />
+</form>
+</div>
+</center>
+</body>
+</html>
