@@ -3,6 +3,17 @@ Install virtualenv in your command line / terminal
 
 ```
 pip3 install virtualenv
+python3 -m venv lp3
+source lp3/bin/activate
+
+
+pip3 install numpy 
+pip3 install pandas
+pip3 install matplotlib
+pip3 install -U scikit-learn
+
+
+python3 ml.py
 ```
 
 Then install below respective libraries 
